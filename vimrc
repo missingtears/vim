@@ -12,9 +12,9 @@ colorscheme molokai
 syntax on                               " syntax highlight
 set hlsearch                            " search highlighting
 set incsearch                           " incremental search
-set number 			                	" 显示行号
+set number                              " 显示行号
 set numberwidth=5
-set showmatch							" 显示对应括号
+set showmatch                           " 显示对应括号
 set nobackup                            " no *~ backup files
 set noswapfile
 
@@ -22,7 +22,7 @@ set cursorline
 set ruler
 set history=1000
 
-set viminfo=							" disable .viminfo file
+set viminfo=                            " disable .viminfo file
 set autoread                            " auto read when file is changed from outside
 set hidden
 set linespace=0
@@ -35,6 +35,7 @@ set cindent
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4
+set expandtab
 
 set showtabline=2
 

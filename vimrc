@@ -3,11 +3,14 @@
 " @date: 2015-11-17
 
 execute pathogen#infect()
-filetype plugin indent on
+" filetype plugin indent on
+filetype plugin on
+let mapleader=","
+let NERDSpaceDelims=1
 
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
-colorscheme molokai
+colorscheme seti
 
 syntax on                               " syntax highlight
 set hlsearch                            " search highlighting
@@ -59,3 +62,6 @@ map <F2> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+
+
+let g:templates_no_autocmd = 0

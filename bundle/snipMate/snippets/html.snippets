@@ -80,39 +80,39 @@ snippet doct
 snippet doct5
 	<!DOCTYPE html>
 	<html lang="en">
-	  <head>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	    <title>Bootstrap 101 Template</title>
+		<head>
+			<meta charset="utf-8">
+	    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    	<title>Bootstrap 101 Template</title>
 
-	    <!-- compass -->
-	    <link href="/stylesheets/main.css" rel="stylesheet" type="text/css" />
-	    <!-- link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	  	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" / -->
-		<!--[if IE]>
-		  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-		<![endif]-->
+	    	<!-- compass -->
+	    	<link href="/stylesheets/main.css" rel="stylesheet" type="text/css" />
+	    	<!-- link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  		<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" / -->
+			<!--[if IE]>
+				<link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+			<![endif]-->
 
-	    <!-- Bootstrap -->
-	    <!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
+	    	<!-- Bootstrap -->
+	    	<!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
 
-	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
-	  </head>
-	  <body>
-	    <div>hi, fpi-inc!</div>
+	    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    	<!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+				<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    	<![endif]-->
+		</head>
+		<body>
+			${1}
 
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script -->
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <!-- script src="js/bootstrap.min.js"></script -->
-	  </body>
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    	<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script -->
+	    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	    	<!-- script src="js/bootstrap.min.js"></script -->
+		</body>
 	</html>
 # XHTML Doctype 1.0 Frameset
 snippet docxf
@@ -166,7 +166,7 @@ snippet base
 snippet r
 	<br`Close()[1:]`>
 snippet div
-	<div id="${1:name}">
+	<div class="${1:name}">
 		${2}
 	</div>
 # Embed QT Movie
@@ -197,7 +197,7 @@ snippet form
 	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
 	</form>
 snippet h1
-	<h1 id="${1:heading}">${2:$1}</h1>
+	<h1 class="${1:heading}">${2:$1}</h1>
 snippet input
 	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
 snippet label
@@ -217,9 +217,13 @@ snippet select
 		<option value="${3:option}">${4:$3}</option>
 	</select>${5}
 snippet table
-	<table border="${1:0}">
-		<tr><th>${2:Header}</th></tr>
-		<tr><th>${3:Data}</th></tr>
-	</table>${4}
+	<table border="${1:0}" width="${2:100%}" cellspacing="${3:0}" cellpadding="${4:0}">
+		<tr>
+			<th>${5:Header}</th>
+		</tr>
+		<tr>
+			<td>${6:Data}</td>
+		</tr>
+	</table>${7}
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
